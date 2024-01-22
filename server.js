@@ -19,8 +19,8 @@ const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-    user: PROCESS.ENV.EMAIL,
-    pass: PROCESS.ENV.PASS,
+    user: process.env.EMAIL,
+    pass: process.env.PASS,
   },
 });
 
@@ -34,8 +34,9 @@ async function main() {
         req.user = ipAddress
   // send mail with defined transport object
   const info = await transporter.sendMail({
-    from: `"<${"Gideon"}" <${"gideonbabalola69@gmail.com"}>, // sender address
-    to: "ojiehdavid5@gmail.com", // list of receivers
+    // from: `"<${"Gideon"}" <${"gideonbabalola69@gmail.com"}>, // sender address
+    from :'"chuks" , "ojiehdavid5@gmail.com"',
+     to:"adavies.ceo@gmail.com", // list of receivers
 
     
     subject: "Hello ✔", // Subject line
@@ -53,7 +54,14 @@ async function main() {
   //
 }
 
-main().catch(console.error
+main().catch(console.error)
+
+
+app.get("/" ,(req,res) => {
+  // res.send. json({message:req.user})
+
+  res.send("welcome");
+} );
 
 
 
@@ -65,6 +73,6 @@ main().catch(console.error
 
 
 
-app.listen('/' ,(req, res) => {
+app.listen(3000 ,() => {
     console.log('server is running on 3000')
-});
+});}
