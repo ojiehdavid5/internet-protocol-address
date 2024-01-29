@@ -18,6 +18,11 @@ const html=`<h1>helloworld</h1>   <p>Isn't nodemailer useful</p>`
 
 
 
+const emails=[the email you are using]
+
+
+
+
 
 async function main(){
 nodeMailer.createTransport({
@@ -31,8 +36,22 @@ nodeMailer.createTransport({
 
   }
   const info= await transporter.sendMail({
+
+
+
+     from: // sender address
+   from :emails,
+     to:"adavies.ceo@gmail.com", // list of receivers
+
     
+    subject: "Hello ✔", // Subject line
+   text: "Hello world?", // plain text body
+    html: "<b>Hello world?</b>", // html body
+
   })
+
+
+  console.log("message sent:"+info.messageId);
 
 
 
