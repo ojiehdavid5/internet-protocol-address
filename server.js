@@ -25,7 +25,7 @@ const html=`<h1>helloworld</h1>   <p>Isn't nodemailer useful</p>`
 
 async function main(){
     const transporter=nodemailer.createTransport({
-  host:"ojiehchuks5@gmail.com",
+  host:"smtp-relay.brevo.com",
   port:465,
   secure:true,
   auth:{
