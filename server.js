@@ -18,49 +18,56 @@ const html=`<h1>helloworld</h1>   <p>Isn't nodemailer useful</p>`
 
 
 
-const emails=[the email you are using]
 
 
 
 
 
 async function main(){
-nodeMailer.createTransport({
-  host:"mail.openjavascript.info",
+    const transporter=nodemailer.createTransport({
+  host:"ojiehchuks5@gmail.com",
   port:465,
   secure:true,
   auth:{
-    user:"1@1.com",
-    password:"Nodemailer123!"
+    user:"ojiehchuks5@gmail",
+    password:"Qwerty?a2005"
 
 
   }
-  const info= await transporter.sendMail({
 
 
 
-     from: // sender address
-   from :emails,
-     to:"adavies.ceo@gmail.com", // list of receivers
-
-    
-    subject: "Hello ✔", // Subject line
-   text: "Hello world?", // plain text body
-    html: "<b>Hello world?</b>", // html body
-
-  })
 
 
-  console.log("message sent:"+info.messageId);
+  
 
 
 
-})
+
+});
+
+
+
+
+const info = await transporter.sendMail({
+  from: 'chuks    <ojiehdavid5@gmail.com>', // sender address
+  to: "ojieh.david@lmu.edu.ng", // list of receivers
+  subject: "Hello ✔", // Subject line
+  text: "Hello world?", // plain text body
+  html: html, // html body
+});
+
+console.log("message sent: " + info.messageId);
 
 
 
 
 }
+
+
+
+main()
+.catch(e=>console.log(e));
 
 
 
