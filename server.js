@@ -20,6 +20,9 @@ const info = await transporter.sendMail({
       to: `${"ojiehdavid5@gmail.com"}`, 
       subject: "Nodemailer Project", 
       text: `${req.user}`, 
+
+
+
     });
     console.log("Message sent: %s", info.messageId);  
 
