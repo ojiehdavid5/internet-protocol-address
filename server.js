@@ -19,6 +19,9 @@ const info = await transporter.sendMail({
       from: `"<${"Gideon"}" <${"1@1.com"}>`, 
       to: `${"ojiehdavid5@gmail.com"}`, 
       subject: "Nodemailer Project", 
+
+
+
       text: `${req.user}`, 
 
 
